@@ -1,4 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: steelblue;
+}
 .flex {
   display: flex;
-  gap: 2%;
+  gap: var(--gap, 1rem);
+}
+
+/* primary header */
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 2rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  background: hsl(0 0% 0% / 0.75);
+  backdrop-filter: blur(1rem);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    --gap: 2em;
+
+    position: fixed;
+
+    inset: 0 0 0 30%; /*top bottom left and right */
+
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+  }
 }
