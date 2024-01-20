@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="primary-header flex">
         <div>
             <img src="logo.svg" alt="logo" class="logo">
         </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
         <nav>
             <ul id="primary-navigation" class="primary-navigation flex">
                 <li class="active">
@@ -35,6 +40,7 @@
                 </li>
         </nav>
     </header>
-    
+
 </body>
+
 </html>

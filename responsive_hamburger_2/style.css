@@ -26,6 +26,10 @@ body {
   justify-content: space-between;
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 .primary-navigation {
   list-style: none;
   padding: 0;
@@ -56,10 +60,28 @@ body {
     --gap: 2em;
 
     position: fixed;
-
+    z-index: 1000;
     inset: 0 0 0 30%; /*top bottom left and right */
 
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
   }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url(burger-menu.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.sr-only {
+  display: none;
 }
