@@ -80,7 +80,8 @@ body {
     display: block;
     position: absolute;
     z-index: 9999;
-    background: url(burger-menu.svg);
+    background-color: transparent;
+    background-image: url(burger-menu.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 2rem;
@@ -88,6 +89,16 @@ body {
     aspect-ratio: 1;
     top: 2rem;
     right: 2rem;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url("icon-close.svg");
+  }
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+  .primary-navigation a > span[aria-hidden] {
+    display: none;
   }
 }
 
