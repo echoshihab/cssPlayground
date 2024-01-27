@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: red;
+  flex-basis: 1;
+  height: 4rem;
+  background-color: #e8e8e8;
+  border-bottom: 0.2px solid black;
+}
+
+.content {
+  border: 1px solid black;
+  flex-basis: 8;
+  background-color: yellow;
+  min-height: 50rem;
+}
