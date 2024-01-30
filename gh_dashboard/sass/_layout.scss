@@ -4,11 +4,19 @@
 }
 
 .header {
-  background-color: red;
+  display: flex;
+  align-items: center;
   flex-basis: 1;
   height: 4rem;
+  padding: 16px;
   background-color: #e8e8e8;
   border-bottom: 0.2px solid black;
+}
+
+.header__start-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .content {
